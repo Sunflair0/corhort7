@@ -11,7 +11,8 @@ a:visited.flag {
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	border: 2px solid rgb(0, 0, 0);
 	border-right: transparent;
-	background: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.3) 0 15px, rgba(255, 255, 255, 0.493) 15px 20px);
+	background-image: repeating-radial-gradient(rgba(0, 0, 0, 0.4), transparent);
+	background-size: 5px 5px;
 	writing-mode: vertical-rl;
 	text-orientation: upright;
 	text-transform: uppercase;

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="bb_script.js" defer></script>
+	<link href="bb_styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="main.css" />
+	<link rel="icon" href="favicon-32x32.png">
+	<style>
+		/* Add these styles for the image */
+		#about img {
+			display: block;
+			/* To remove extra space below inline images */
+			margin: 0 auto;
+			/* Center the image horizontally */
+			border: 10px solid #000000;
+			/* Add a border around the image */
+			max-width: 30%;
+			/* Set the maximum width to 100% of its container */
+			height: auto;
+			/* Maintain the aspect ratio */
+		}
+	</style>
+	<title>MyWebsite</title>
+</head>
+
+<body>
+	<a class="flag" href="index.html">back</a>
+	<ul class="tabs">
+		<li data-tab-target="#home" class="active tab">Home</li>
+		<li data-tab-target="#videos" class="tab">Videos</li>
+		<li data-tab-target="#about" class="tab">About</li>
+		<li data-tab-target="#news" class="tab">News</li>
+		<li data-tab-target="#jokes" class="tab">Jokes</li>
+	</ul>
+
+	<div id="news" data-tab-content>
+		<h1 class="centered-text">News and updates related to this update</h1>
+		<p class="centered-text">As of 12/19/2023 their are no more plans to update this website</p>
+		<p>.</p>
+		<p>.</p>
+		<p>.</p>
+		<p>.</p>
+		<p>.</p>
+		<p>.</p>
+		<p>.</p>
+	</div>
+
+	<div id="jokes" data-tab-content>
+		<h1 class="centered-text"> Psssst. Hey you, Wanna Hear a Joke?</h1>
+		<p class="centered-text">I made all of these dad jokes myself, enjoy!</p>
+		<p class="centered-text">Why don't skeletons fight each other?
+			Because they don't have the guts.</p>
+		<p class="centered-text">How does a penguin build its house?
+		<p class="centered-text">How does a penguin build its house? Igloos it together!</p>
+		<p class="centered-text">Why did the scarecrow win an award?
+			Because he was outstanding in his field.</p>
+		<p class="centered-text">I only know 25 letters of the alphabet.
+			I don't know y.</p>
+		<p class="centered-text">What do you call fake spaghetti?
+			An impasta.</p>
+		<p class="centered-text">Why don't scientists trust atoms?
+			Because they make up everything.</p>
+		<p class="centered-text">What do you call a fish wearing a crown?
+			A kingfish.</p>
+		<p class="centered-text">Why did the bicycle fall over?
+			Because it was two-tired.</p>
+		<p class="centered-text">How do you organize a space party?
+			You planet.</p>
+		<p class="centered-text">I told my wife she should embrace her mistakes.
+			She gave me a hug.</p>
+	</div>
+	<div class="tab-content">
+		<div id="home" data-tab-content class="active">
+			<h1 class="centered-text">Home</h1>
+			<p>Hello, I'm Brian, and this is my corner of the internet. Thank you for visiting!</p>
+
+			<section class="home-section">
+				<h2 class="centered-text">What You'll Find Here</h2>
+				<p>
+					This website is a showcase of my work, interests, and anything else Id like to show.
+					Feel free to explore and get to know me better.
+				</p>
+			</section>
+
+			<section class="home-section">
+				<h2 class="centered-text">Featured Content</h2>
+				<p class="centered-text">
+					Check out some of my videos Via the <a href="http://127.0.0.1:5500/">Videos</a> tab.
+				</p>
+				<!-- Replace the following placeholders with your actual video embed codes -->
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/WCkoi8ApQW8" frameborder="0"
+					allowfullscreen></iframe>
+			</section>
+
+			<section class="home-section">
+				<h2 class="centered-text">Latest Updates</h2>
+				<p>
+					Stay tuned for the latest updates and news. I'll be sharing my recent activities, projects, and
+					more.
+				</p>
+			</section>
+
+			<section class="home-section">
+				<h2 class="centered-text">Contact Me</h2>
+				<p>
+					Have questions or want to collaborate? Feel free to reach out:
+					<!-- Replace the following placeholder with your actual email address -->
+					<a href="mailto:BrianMathewBurke06@gmail.com">BrianMathewBurke06@gmail.com</a>
+				</p>
+			</section>
+		</div>
+		<div id="about" data-tab-content>
+			<h1 class="centered-text">About Me</h1>
+			<p class="centered-text">Here is what i look like:</p>
+			<img
+				src="https://yt3.ggpht.com/1OxmkpR4LqM950pX9svXJY9Cx51_MpB-oGvEJMAqdk-mjrjD9YC0LJhbT6dWjuU9Coj_9Ys9XZOG7Q=s640-c-fcrop64=1,0000207dffff9a50-nd-v1">
+			<p>This image is intentionally cringy so... dont judge me!</p>
+			<h2 class="centered-text">Who am I?</h2>
+			<p>I am me.</p>
+		</div>
+		<div id="videos" data-tab-content>
+			<h1 class="centered-text">My Videos</h1>
+			<p> If you know me then you know how i love making stupid videos heres a few for your enjoyment.</p>
+			<div class="videos-iframe-container">
+				<iframe width="800" height="430" src="https://www.youtube.com/embed/WCkoi8ApQW8" frameborder="0"
+					allowfullscreen></iframe>
+				<iframe width="800" height="430" src="https://www.youtube.com/embed/giTDPD3sk6I" frameborder="0"
+					allowfullscreen></iframe>
+				<iframe width="800" height="430" src="https://www.youtube.com/embed/_7X4cUL-6uY" frameborder="0"
+					allowfullscreen></iframe>
+				<iframe width="800" height="430" src="https://www.youtube.com/embed/XByQFD0pg28" frameborder="0"
+					allowfullscreen></iframe>
+			</div>
+		</div>
+
+		</footer>
+</body>
+
+</html>

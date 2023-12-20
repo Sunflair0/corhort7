@@ -1,6 +1,11 @@
+* {
+	border: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 body {
-	background-color: rgba(196, 171, 135, 0.592);
-	background-color: rgb(0, 0, 0);
+	background: radial-gradient(rgb(141, 12, 12), black);
 	min-height: 100vh;
 	overflow: hidden;
 	position: relative;
@@ -8,17 +13,58 @@ body {
 	transform-style: preserve-3d;
 }
 
+svg {
+	position: absolute;
+	fill: #00b5ef;
+	stroke: black;
+	background-color: rgba(255, 255, 255, 0.85);
+	border-radius: 10px;
+	height: clamp(90px, 0.5vw, 207px);
+	padding: clamp(0.5vw, 1.5vw, .2vw);
+	max-width: 50%;
+	margin-left: 10%;
+	margin-top: 20vh;
+	rotate: -20deg;
+
+}
+
+.google {
+	position: absolute;
+	aspect-ratio: 2/1;
+	margin-top: 50vh;
+	margin-left: 40%;
+	background-color: rgba(255, 255, 255, 0.85);
+	border-radius: 10px;
+	rotate: 15deg;
+
+}
+
+.next {
+	position: absolute;
+	color: rgb(255, 255, 255);
+	top: 75vh;
+	font-size: xx-large;
+	margin: auto;
+	z-index: 1;
+	rotate: -10deg;
+}
+
+.blob_wrap {
+	z-index: -1;
+}
+
 .blob1 {
 	/* https://9elements.github.io/fancy-border-radius/ */
 	display: flex;
 	position: relative;
-	height: 7rem;
+	height: 24rem;
+	top: 50vh;
+	right: 70vw;
 	aspect-ratio: 1;
 	position: absolute;
 	rotate: 180deg;
 	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
-	transform: translateZ(-100px);
-	background: linear-gradient(rgba(0, 0, 255, 0.748), rgba(233, 22, 166, 0.633));
+	background-image: linear-gradient(rgba(199, 1, 54, 0.693), rgba(236, 149, 17, 0.716));
 	animation: blob1 7.5s linear infinite;
 }
 
@@ -36,14 +82,14 @@ body {
 }
 
 .blob2 {
-	height: 7rem;
+	height: 27rem;
 	aspect-ratio: 4/5;
 	position: absolute;
 	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
 	box-shadow: 0 0 50px rgb(208, 207, 207) inset;
 	rotate: 76deg;
-	transform: translateZ(-100px);
 	right: 13vw;
+	top: 70vh;
 	background: linear-gradient(rgba(255, 221, 0, 0.6), green);
 	animation: blob1 9s linear infinite;
 }
@@ -62,15 +108,14 @@ body {
 }
 
 .blob3 {
-	height: 7rem;
+	height: 17rem;
 	aspect-ratio: 1;
 	position: absolute;
 	rotate: 45deg;
 	box-shadow: 0 0 7px rgb(66, 65, 65) inset;
-	right: 20vw;
-	transform: translateZ(-100px);
+	right: -5vw;
 	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
-	background-image: linear-gradient(rgba(199, 1, 54, 0.693), rgba(236, 149, 17, 0.716));
+	background: linear-gradient(rgba(0, 0, 255, 0.748), rgba(233, 22, 166, 0.633));
 	animation: blob1 8s linear infinite;
 }
 
@@ -98,44 +143,47 @@ body {
 	}
 
 	50% {
-		border-radius: 24% 76% 64% 36% / 6% 70% 30% 94%;
+		border-radius: 64% 76% 64% 36% / 56% 70% 30% 94%;
 	}
 
 	75% {
-		border-radius: 76% 24% 64% 26% / 65% 34% 66% 35%;
+		border-radius: 76% 24% 64% 26% / 65% 34% 36% 35%;
 	}
 }
 
-.cursor {
+.left,
+.right {
+	display: flex;
+	width: 46vw;
 	position: absolute;
-	top: .75rem;
-	margin-left: .25em;
-	animation: blink .98s infinite steps(1);
+	height: 100%;
+	top: 0;
 }
 
-@keyframes blink {
+.left {
+	border-right: rgba(255, 217, 0, 0.638) 3px solid;
+	box-shadow: 0 0 20px rgb(0, 0, 0);
+	background: rgba(193, 189, 189, 0.575);
+	z-index: 1;
+}
 
-	50% {
-		opacity: 0
-	}
+.right {
+	align-items: center;
+	right: 0;
 }
 
 .square {
 	display: flex;
-	position: relative;
-	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
+	position: absolute;
 	border: 6px double rgba(255, 174, 52, 0.7);
 	height: 85vh;
-	width: 90%;
+	width: 85%;
 	transform: translateZ(10px);
-	margin: 20px;
+	margin: auto;
 	inset: 0;
-	padding: 10px;
 	background: linear-gradient(rgb(255, 244, 97), rgb(190, 181, 117), rgb(255, 255, 255));
 	background-image: repeating-radial-gradient(rgb(0, 0, 0), transparent);
 	background-size: 5px 5px;
-	animation: blob1 8s linear infinite;
-
 }
 
 nav {
@@ -143,19 +191,62 @@ nav {
 	position: absolute;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	border-radius: 50%;
 }
 
 nav>a {
 	padding: 20px;
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 	margin: 30px;
-	border: 2px solid gold;
-	border-radius: 10px;
-	background-image: radial-gradient(circle at 10% 70%, rgb(245, 194, 172) 0%, transparent 40%);
+	border: 2px solid rgba(254, 94, 25, 0.723);
+	background-image: radial-gradient(circle at 0% 70%, rgba(251, 160, 122, 0.75) 0%, transparent 40%),
+		radial-gradient(circle at 95% 10%, rgb(244, 121, 121) 0%, transparent 20%);
 	border-radius: inherit;
-	box-shadow: 0 0 17px rgb(56, 52, 52) inset;
+	box-shadow: 0 0 17px rgb(250, 18, 18) inset;
 	inset: 0;
+	animation: float 15s linear infinite;
+	animation-delay: calc(3s * var(--i));
+	transition: .3s all;
+}
+
+nav>a:before {
+	content: "";
+	height: 95%;
+	width: 95%;
+	position: absolute;
+	background-color: rgba(42, 1, 1, 0.408);
+	border: 2px solid rgba(243, 133, 133, 0.253);
+	border-radius: 50%;
+	transform: translate(-17px, -17px);
+	z-index: -10;
+	filter: blur(6px);
+}
+
+nav>a:hover {
+	background-color: rgb(189, 207, 26);
+	border: 2px solid rgba(245, 63, 63, 0.36);
+	color: black;
+}
+
+@keyframes float {
+
+	20% {
+		transform: translate(16px, 10px);
+	}
+
+	50% {
+		transform: translate(20px, 15px);
+	}
+
+	70% {
+		transform: translate(17px, 8px);
+	}
+
+	90% {
+		transform: translate(10, 0);
+	}
+
 }
 
 a {
