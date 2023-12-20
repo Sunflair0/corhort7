@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    color: rgb(0, 0, 0);
+    background-color: rgb(241, 241, 241);
+}
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+h1 {
+    color: rgb(0, 0, 0);
+    background-color: #9bc0d9;
+    font-size: 35px;
+    font-family: monospace;
+}
+h2 {
+    background-color: #f0d065;
+    font-size: 34px;
+    font-family: Arial;
+}
+h3 {
+    color: black;
+    background-color: #dfb118;
+    font-size: 25px;
+    font-family: arial;
+}
+p {
+    color: #000000;
+    font-size: 20px;
+    font-family: cambria;
+}
+footer {
+    background-color: darkslateblue;
+    height: 300px;
+    width: 100%;
+}
+li {
+    background-color: #9bc0d9;
+    display: inline-block;
+    text-decoration: none;
+}
+.nav-link {
+    padding: 10px;
+    display: block;
+}
+.topnav {
+    background-color: #474646;
+    overflow: hidden;
+}
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.topnav a.active {
+    background-color: #f0d065;
+    color: white;
+}
+.text {
+    float: right;
+}
