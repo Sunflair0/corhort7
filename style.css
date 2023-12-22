@@ -20,33 +20,51 @@ svg {
 	background-color: rgba(255, 255, 255, 0.85);
 	border-radius: 10px;
 	height: clamp(90px, 0.5vw, 207px);
-	padding: clamp(0.5vw, 1.5vw, .2vw);
+	padding: clamp(0.5vw, 1.5vw, 1vw);
 	max-width: 50%;
+	margin-top: 15%;
 	margin-left: 10%;
-	margin-top: 20vh;
 	rotate: -20deg;
-
+	box-shadow: 10px 10px 7px rgb(43, 0, 0);
 }
 
 .google {
 	position: absolute;
+	width: clamp(150px, 14.5vw, 207px);
 	aspect-ratio: 2/1;
-	margin-top: 50vh;
-	margin-left: 40%;
+	padding: 0 5px;
+	margin-top: 50%;
+	margin-left: 35%;
 	background-color: rgba(255, 255, 255, 0.85);
 	border-radius: 10px;
 	rotate: 15deg;
+	box-shadow: 10px 10px 7px rgb(43, 0, 0);
+}
 
+.south {
+	position: absolute;
+	width: 255px;
+	aspect-ratio: 255/100;
+	margin-top: 80%;
+	margin-left: 25%;
+	background-image: url(South\ New\ Logo.png);
 }
 
 .next {
+	text-align: center;
 	position: absolute;
-	color: rgb(255, 255, 255);
-	top: 75vh;
+	color: rgb(98, 97, 97);
+	top: 79%;
+	left: 5%;
+	width: clamp(180px, 0.5vw, 207px);
+	background-color: rgba(255, 255, 255, 0.85);
+	padding: 10px 5px;
 	font-size: xx-large;
 	margin: auto;
+	border-radius: 10px;
 	z-index: 1;
 	rotate: -10deg;
+	box-shadow: 10px 10px 7px rgb(24, 0, 0);
 }
 
 .blob_wrap {
@@ -64,8 +82,8 @@ svg {
 	position: absolute;
 	rotate: 180deg;
 	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
-	background-image: linear-gradient(rgba(199, 1, 54, 0.693), rgba(236, 149, 17, 0.716));
-	animation: blob1 7.5s linear infinite;
+	background-image: linear-gradient(rgba(168, 0, 0, 0.693), rgba(255, 157, 0, 0.867));
+	animation: blob1 7.5s ease-in-out infinite;
 }
 
 .blob1::before {
@@ -91,7 +109,7 @@ svg {
 	right: 13vw;
 	top: 70vh;
 	background: linear-gradient(rgba(255, 221, 0, 0.6), green);
-	animation: blob1 9s linear infinite;
+	animation: blob1 9s ease-in-out infinite;
 }
 
 .blob2::before {
@@ -116,7 +134,7 @@ svg {
 	right: -5vw;
 	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
 	background: linear-gradient(rgba(0, 0, 255, 0.748), rgba(233, 22, 166, 0.633));
-	animation: blob1 8s linear infinite;
+	animation: blob1 11s ease-in-out infinite;
 }
 
 .blob3::before {
@@ -154,19 +172,21 @@ svg {
 .left,
 .right {
 	display: flex;
-	width: 46vw;
+	width: 42vw;
 	position: absolute;
 	height: 100%;
 	top: 0;
 }
 
 .left {
-	border-right: rgba(255, 217, 0, 0.638) 3px solid;
-	box-shadow: 0 0 20px rgb(0, 0, 0);
-	background: rgba(193, 189, 189, 0.575);
+	backdrop-filter: blur(5px) brightness(1.25);
+	border-right: rgb(0, 0, 0) 2px solid;
+	box-shadow: 0 0 20px rgb(0, 0, 0), 0 0 40px rgb(0, 0, 0);
+	background: repeating-linear-gradient(90deg, rgba(41, 38, 38, 0.2),  rgb(152, 143, 132), rgba(58, 48, 48, 0.15), rgba(148, 148, 151, 0.558));
+	background-size: 37px;
 	z-index: 1;
 }
-
+/* paradomia */
 .right {
 	align-items: center;
 	right: 0;
@@ -175,15 +195,17 @@ svg {
 .square {
 	display: flex;
 	position: absolute;
-	border: 6px double rgba(255, 174, 52, 0.7);
-	height: 85vh;
+	border-bottom: 2px solid black;
+	outline: 6px double rgb(216, 142, 29);
+	height: 80vh;
 	width: 85%;
-	transform: translateZ(10px);
+	transform: translateZ(100px);
 	margin: auto;
 	inset: 0;
+	box-shadow: 10px 10px 7px rgb(43, 0, 0), 10px 10px 7px rgb(43, 0, 0) inset;
 	background: linear-gradient(rgb(255, 244, 97), rgb(190, 181, 117), rgb(255, 255, 255));
-	background-image: repeating-radial-gradient(rgb(0, 0, 0), transparent);
-	background-size: 5px 5px;
+	background-image: repeating-radial-gradient(rgb(0, 0, 0) 50%, transparent);
+	background-size: 15px 15px;
 }
 
 nav {
@@ -195,17 +217,22 @@ nav {
 }
 
 nav>a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: 20px;
-	width: 100px;
-	height: 100px;
+	width: clamp(65px, 7.5vw, 100px);
+	aspect-ratio: 1;
 	margin: 30px;
 	border: 2px solid rgba(254, 94, 25, 0.723);
 	background-image: radial-gradient(circle at 0% 70%, rgba(251, 160, 122, 0.75) 0%, transparent 40%),
 		radial-gradient(circle at 95% 10%, rgb(244, 121, 121) 0%, transparent 20%);
 	border-radius: inherit;
+	background-clip: border-box;
 	box-shadow: 0 0 17px rgb(250, 18, 18) inset;
 	inset: 0;
-	animation: float 15s linear infinite;
+	backdrop-filter: blur(2px);
+	animation: float 15s ease-in-out infinite;
 	animation-delay: calc(3s * var(--i));
 	transition: .3s all;
 }
@@ -218,15 +245,33 @@ nav>a:before {
 	background-color: rgba(42, 1, 1, 0.408);
 	border: 2px solid rgba(243, 133, 133, 0.253);
 	border-radius: 50%;
-	transform: translate(-17px, -17px);
+	transform: translate(-10px, -10px);
 	z-index: -10;
 	filter: blur(6px);
 }
 
+nav>a:after {
+	content: "";
+	height: 95%;
+	width: 95%;
+	position: absolute;
+	background: radial-gradient(rgba(235, 39, 21, 0.2), transparent);
+	border-radius: 50%;
+	transform: translate(35px, 30px);
+	z-index: -10000;
+	filter: blur(6px);
+}
+
 nav>a:hover {
-	background-color: rgb(189, 207, 26);
+	box-shadow: 0 0 17px rgb(219, 245, 89) inset;
+	border: 2px solid rgba(255, 255, 255, 0.723);
+	background-color: rgba(211, 235, 0, 0.616);
 	border: 2px solid rgba(245, 63, 63, 0.36);
 	color: black;
+}
+
+nav>a:hover:after {
+	background: radial-gradient(rgba(235, 214, 21, 0.2), transparent);
 }
 
 @keyframes float {
@@ -251,9 +296,9 @@ nav>a:hover {
 
 a {
 	text-decoration: none;
-	color: gold;
+	color: rgb(252, 214, 59);
 }
 
 a:visited {
-	color: rgb(255, 255, 255);
+	color: rgb(255, 115, 0);
 }
