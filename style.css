@@ -5,12 +5,13 @@
 }
 
 body {
-	background: radial-gradient(rgb(141, 12, 12), black);
+	background: radial-gradient(rgb(250, 11, 11), rgb(24, 1, 1));
 	min-height: 100vh;
 	overflow: hidden;
 	position: relative;
 	perspective: 1000px;
 	transform-style: preserve-3d;
+	user-select: none;
 }
 
 svg {
@@ -45,9 +46,12 @@ svg {
 	position: absolute;
 	width: 255px;
 	aspect-ratio: 255/100;
-	margin-top: 80%;
-	margin-left: 25%;
+	margin-top: 88%;
+	margin-left: 2%;
+	background-color: rgba(255, 255, 255, 0.85);
+	border-radius: 10px;
 	background-image: url(South\ New\ Logo.png);
+	box-shadow: 10px 10px 7px rgb(43, 0, 0);
 }
 
 .next {
@@ -76,13 +80,13 @@ svg {
 	display: flex;
 	position: relative;
 	height: 24rem;
-	top: 50vh;
+	top: 30vh;
 	right: 70vw;
 	aspect-ratio: 1;
 	position: absolute;
 	rotate: 180deg;
 	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
-	background-image: linear-gradient(rgba(168, 0, 0, 0.693), rgba(255, 157, 0, 0.867));
+	background-image: linear-gradient(rgba(25, 0, 249, 0.693), rgba(200, 0, 255, 0.956));
 	animation: blob1 7.5s ease-in-out infinite;
 }
 
@@ -92,7 +96,7 @@ svg {
 	width: 96%;
 	position: absolute;
 	background: inherit;
-	background-image: radial-gradient(circle at 10% 70%, rgb(211, 172, 245) 0%, transparent 40%);
+	background-image: radial-gradient(circle at 10% 70%, rgb(249, 8, 221) 0%, transparent 40%), radial-gradient(circle at 10% 70%, rgb(249, 8, 156) 0%, transparent 40%);
 	border-radius: inherit;
 	box-shadow: 0 0 17px rgb(56, 52, 52) inset;
 	margin: auto;
@@ -108,7 +112,7 @@ svg {
 	rotate: 76deg;
 	right: 13vw;
 	top: 70vh;
-	background: linear-gradient(rgba(255, 221, 0, 0.6), green);
+	background: linear-gradient(rgb(59, 244, 30), rgb(13, 23, 213));
 	animation: blob1 9s ease-in-out infinite;
 }
 
@@ -118,7 +122,7 @@ svg {
 	width: 97%;
 	position: absolute;
 	background: inherit;
-	background-image: radial-gradient(circle at 10% 70%, rgb(157, 241, 97) 0%, transparent 40%);
+	background-image: radial-gradient(circle at 10% 70%, rgb(15, 227, 192) 0%, transparent 40%);
 	border-radius: inherit;
 	box-shadow: 0 0 25px rgb(56, 52, 52) inset;
 	margin: auto;
@@ -133,7 +137,7 @@ svg {
 	box-shadow: 0 0 7px rgb(66, 65, 65) inset;
 	right: -5vw;
 	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
-	background: linear-gradient(rgba(0, 0, 255, 0.748), rgba(233, 22, 166, 0.633));
+	background: linear-gradient(rgba(255, 0, 0, 0.889), rgb(248, 245, 65)), rgba(255, 255, 0, 0.336);
 	animation: blob1 11s ease-in-out infinite;
 }
 
@@ -143,7 +147,7 @@ svg {
 	width: 96%;
 	position: absolute;
 	background: inherit;
-	background-image: radial-gradient(circle at 10% 70%, rgb(245, 194, 172) 0%, transparent 40%);
+	background-image: radial-gradient(circle at 10% 70%, rgb(227, 199, 17) 0%, transparent 40%);
 	border-radius: inherit;
 	box-shadow: 0 0 17px rgb(56, 52, 52) inset;
 	margin: auto;
@@ -182,10 +186,11 @@ svg {
 	backdrop-filter: blur(5px) brightness(1.25);
 	border-right: rgb(0, 0, 0) 2px solid;
 	box-shadow: 0 0 20px rgb(0, 0, 0), 0 0 40px rgb(0, 0, 0);
-	background: repeating-linear-gradient(90deg, rgba(41, 38, 38, 0.2),  rgb(152, 143, 132), rgba(58, 48, 48, 0.15), rgba(148, 148, 151, 0.558));
+	background: repeating-linear-gradient(90deg, rgba(41, 38, 38, 0.2), rgb(152, 143, 132), rgba(58, 48, 48, 0.15), rgba(148, 148, 151, 0.558));
 	background-size: 37px;
 	z-index: 1;
 }
+
 /* paradomia */
 .right {
 	align-items: center;
@@ -203,8 +208,7 @@ svg {
 	margin: auto;
 	inset: 0;
 	box-shadow: 10px 10px 7px rgb(43, 0, 0), 10px 10px 7px rgb(43, 0, 0) inset;
-	background: linear-gradient(rgb(255, 244, 97), rgb(190, 181, 117), rgb(255, 255, 255));
-	background-image: repeating-radial-gradient(rgb(0, 0, 0) 50%, transparent);
+	background-image: repeating-radial-gradient(rgb(54, 46, 46) 50%, transparent);
 	background-size: 15px 15px;
 }
 
@@ -224,16 +228,16 @@ nav>a {
 	width: clamp(65px, 7.5vw, 100px);
 	aspect-ratio: 1;
 	margin: 30px;
-	border: 2px solid rgba(254, 94, 25, 0.723);
-	background-image: radial-gradient(circle at 0% 70%, rgba(251, 160, 122, 0.75) 0%, transparent 40%),
-		radial-gradient(circle at 95% 10%, rgb(244, 121, 121) 0%, transparent 20%);
+	/* border: 1px solid rgba(147, 147, 147, 0.723); */
+	background-image: radial-gradient(circle at -10% 80%, rgba(255, 255, 255, 0.66) 0%, transparent 60%),
+		radial-gradient(circle at 95% 10%, rgb(243, 91, 71) 0%, transparent 20%);
 	border-radius: inherit;
 	background-clip: border-box;
-	box-shadow: 0 0 17px rgb(250, 18, 18) inset;
+	box-shadow: 0 0 17px rgba(255, 255, 255, 0.414) inset, 0 0 50px rgba(250, 165, 165, 0.293) inset;
 	inset: 0;
 	backdrop-filter: blur(2px);
 	animation: float 15s ease-in-out infinite;
-	animation-delay: calc(3s * var(--i));
+	animation-delay: calc(1s * var(--i));
 	transition: .3s all;
 }
 
@@ -281,15 +285,15 @@ nav>a:hover:after {
 	}
 
 	50% {
-		transform: translate(20px, 15px);
+		transform: translate(28px, 15px);
 	}
 
 	70% {
-		transform: translate(17px, 8px);
+		transform: translate(20px, 8px);
 	}
 
 	90% {
-		transform: translate(10, 0);
+		transform: translate(12, 0);
 	}
 
 }
