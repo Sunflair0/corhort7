@@ -7,7 +7,6 @@
 body {
 	background: radial-gradient(rgb(169, 2, 2), rgb(0, 0, 0) 70%);
 	min-height: 100vh;
-	overflow: hidden;
 	position: relative;
 	perspective: 1000px;
 	transform-style: preserve-3d;
@@ -73,6 +72,10 @@ svg {
 
 .blob_wrap {
 	z-index: -1;
+	overflow: hidden;
+
+
+
 }
 
 .blob1 {
