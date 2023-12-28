@@ -5,8 +5,8 @@
 }
 
 body {
-	background: radial-gradient(rgb(169, 2, 2), rgb(0, 0, 0) 70%);
-	min-height: 100vh;
+	background: radial-gradient(rgb(40, 4, 4), rgb(0, 0, 0) 70%);
+	height: 100vh;
 	position: relative;
 	perspective: 1000px;
 	transform-style: preserve-3d;
@@ -73,9 +73,6 @@ svg {
 .blob_wrap {
 	z-index: -1;
 	overflow: hidden;
-
-
-
 }
 
 .blob1 {
@@ -210,8 +207,8 @@ svg {
 	transform: translateZ(100px);
 	margin: auto;
 	inset: 0;
-	box-shadow: 10px 10px 7px rgb(43, 0, 0), 10px 10px 7px rgb(43, 0, 0) inset;
-	background-image: repeating-radial-gradient(rgb(54, 46, 46) 50%, transparent);
+	box-shadow: -15px 15px 10px rgb(43, 0, 0), -10px 10px 7px rgb(43, 0, 0) inset;
+	background-image: repeating-radial-gradient(rgba(80, 0, 0, 0.619) 50%, transparent);
 	background-size: 15px 15px;
 }
 
@@ -232,13 +229,13 @@ nav>a {
 	aspect-ratio: 1;
 	margin: 30px;
 	/* border: 1px solid rgba(147, 147, 147, 0.723); */
-	background-image: radial-gradient(circle at -10% 80%, rgba(255, 255, 255, 0.66) 0%, transparent 60%),
-		radial-gradient(circle at 95% 10%, rgb(243, 91, 71) 0%, transparent 20%);
+	background-image: radial-gradient(circle at -10% 80%, rgba(255, 0, 0, 0.575) 0%, transparent 60%),
+		radial-gradient(circle at 95% 10%, rgb(255, 30, 0) 0%, transparent 20%);
 	border-radius: inherit;
 	background-clip: border-box;
-	box-shadow: 0 0 17px rgba(211, 211, 211, 0.381) inset, 0 0 50px rgba(67, 2, 2, 0.293) inset;
+	box-shadow: 0 0 17px rgba(116, 0, 0, 0.696) inset, 0 0 50px rgba(0, 0, 0, 0.171) inset;
 	inset: 0;
-	backdrop-filter: blur(2px);
+	backdrop-filter: blur(14px);
 	animation: float 15s ease-in-out infinite;
 	animation-delay: calc(1s * var(--i));
 	transition: .3s all;
@@ -295,10 +292,14 @@ nav>a:hover:after {
 		transform: translate(20px, 8px);
 	}
 
-	90% {
-		transform: translate(12, 0);
+	80% {
+		transform: translate(12, 4);
 	}
 
+0%, 100% {
+		transform: translate(0, 0);
+
+}
 }
 
 a {
