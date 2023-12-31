@@ -30,12 +30,13 @@ body {
 
 .cohort {
 	position: fixed;
-	color: rgba(255, 255, 255, 0.35);
+	color: rgba(227, 227, 227, 0.2);
 	text-orientation: upright;
 	text-shadow: 2px 0 0 rgba(0, 0, 0, 0.3);
 	writing-mode: vertical-rl;
-	left: 90%;
-	top: 2%;
+	left: 86%;
+	top: 4%;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	font-size: clamp(16px, 2vw, 30px);
 }
 
@@ -51,7 +52,7 @@ body {
 .left {
 	backdrop-filter: blur(3px) brightness(1.2);
 	border-right: rgb(0, 0, 0) 2px solid;
-	box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), -10px 0 0px rgba(2, 51, 38, 0.182) inset;
+	box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), -10px -10px 0px rgba(2, 51, 38, 0.182) inset, 10px 0 0px rgba(2, 51, 38, 0.1) inset,  10px 10px 0px rgba(2, 51, 38, 0.182) inset;
 	/* background: repeating-linear-gradient(90deg, rgba(41, 38, 38, 0.2), rgb(152, 143, 132), rgba(58, 48, 48, 0.15), rgba(148, 148, 151, 0.558)); */
 	background: linear-gradient(rgba(0, 150, 77, 0.15), rgba(146, 234, 192, 0.2));
 	z-index: 1;
@@ -73,16 +74,15 @@ body {
 svg {
 	fill: #00b5ef;
 	stroke: black;
-	height: clamp(65px, 1.5vw, 207px);
-	padding: clamp(0.5vw, 1.5vw, 1vw);
-	max-width: 50%;
+	height: clamp(48px, 4.5vw, 207px);
+	padding: clamp(4px, 1.5vw, 10px);
 	top: 8%;
 	left: 5%;
 	rotate: -20deg;
 }
 
 .google {
-	width: clamp(120px, 7.5vw, 207px);
+	width: clamp(90px, 10.5vw, 227px);
 	aspect-ratio: 2/1;
 	padding: 0 3px;
 	top: 60%;
@@ -96,13 +96,14 @@ svg {
 	top: 80%;
 	left: 5%;
 	padding: 10px 5px;
-	font-size: xx-large;
+	font-size: clamp(24px, 2vw, 32px);
+	text-shadow: none;
 	margin: auto;
-	width: clamp(180px, 0.5vw, 207px);
+	width: auto;
 }
 
 .south {
-	width: clamp(180px, 2vw, 265px);
+	width: clamp(125px, 12vw, 265px);
 	aspect-ratio: 265/100;
 	top: 30%;
 	left: 29%;
@@ -282,6 +283,7 @@ nav>a:hover {
 	background-color: rgba(211, 235, 0, 0.616);
 	border: 2px solid rgba(245, 63, 63, 0.36);
 	color: black;
+	text-shadow: none;
 }
 
 nav>a:hover:after {
