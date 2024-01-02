@@ -4,8 +4,14 @@
 	box-sizing: border-box;
 }
 
+html {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: rgba(190, 190, 190, 0.6);
+	text-shadow: -2px 1px 0 rgb(0, 0, 0);
+}
+
 body {
-	background: radial-gradient(rgba(99, 1, 1), rgb(15, 0, 0) 70%);
+	background: radial-gradient(rgb(224, 63, 63), rgb(15, 0, 0) 70%);
 	height: 100vh;
 	position: relative;
 	perspective: 1000px;
@@ -24,19 +30,16 @@ body {
 	margin: auto;
 	inset: 0;
 	box-shadow: -15px 15px 10px rgb(43, 0, 0), -10px 10px 7px rgb(43, 0, 0) inset;
-	background-image: repeating-radial-gradient(rgba(124, 2, 2, 0.4) 50%, transparent, rgba(0, 0, 0, 0.65));
+	background-image: repeating-radial-gradient(rgba(124, 2, 2, 0.5) 50%, transparent, rgba(0, 0, 0, 0.5));
 	background-size: 15px 15px;
 }
 
 .cohort {
 	position: fixed;
-	color: rgba(227, 227, 227, 0.2);
 	text-orientation: upright;
-	text-shadow: 2px 0 0 rgba(0, 0, 0, 0.3);
 	writing-mode: vertical-rl;
-	left: 86%;
+	left: 89%;
 	top: 4%;
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	font-size: clamp(16px, 2vw, 30px);
 }
 
@@ -50,11 +53,11 @@ body {
 }
 
 .left {
-	backdrop-filter: blur(3px) brightness(1.2);
+	backdrop-filter: blur(1.75px) brightness(1.05);
 	border-right: rgb(0, 0, 0) 2px solid;
-	box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), -10px -10px 0px rgba(2, 51, 38, 0.182) inset, 10px 0 0px rgba(2, 51, 38, 0.1) inset,  10px 10px 0px rgba(2, 51, 38, 0.182) inset;
+	box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), -10px -10px 0px rgba(2, 51, 38, 0.182) inset, 10px 0 0px rgba(2, 51, 38, 0.1) inset, 10px 10px 0px rgba(2, 51, 38, 0.182) inset;
 	/* background: repeating-linear-gradient(90deg, rgba(41, 38, 38, 0.2), rgb(152, 143, 132), rgba(58, 48, 48, 0.15), rgba(148, 148, 151, 0.558)); */
-	background: linear-gradient(rgba(0, 150, 77, 0.15), rgba(146, 234, 192, 0.2));
+	background: linear-gradient(rgba(0, 0, 0, 0.16), rgba(248, 0, 0, 0.15));
 	z-index: 1;
 }
 
@@ -68,7 +71,7 @@ body {
 	position: absolute;
 	background-color: rgb(230, 230, 230);
 	border-radius: 10px;
-	box-shadow: 5px 5px 3px rgb(43, 0, 0);
+	box-shadow: -5px 5px 3px rgb(43, 0, 0);
 }
 
 svg {
@@ -91,12 +94,13 @@ svg {
 }
 
 .next {
-	color: rgb(62, 62, 62);
+	color: rgb(100, 100, 100);
 	rotate: -10deg;
 	top: 80%;
 	left: 5%;
 	padding: 10px 5px;
 	font-size: clamp(24px, 2vw, 32px);
+	font-family: sans-serif;
 	text-shadow: none;
 	margin: auto;
 	width: auto;
@@ -130,7 +134,7 @@ svg {
 	position: absolute;
 	rotate: 180deg;
 	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
-	background-image: linear-gradient(rgba(25, 0, 249, 0.693), rgba(200, 0, 255, 0.956));
+	background-image: linear-gradient(rgba(87, 0, 249, 0.822), rgba(200, 0, 255, 0.334));
 	animation: blob 7.5s ease-in-out infinite;
 }
 
@@ -142,7 +146,7 @@ svg {
 	background: inherit;
 	background-image: radial-gradient(circle at 10% 70%, rgb(249, 8, 221) 0%, transparent 40%), radial-gradient(circle at 10% 70%, rgb(249, 8, 156) 0%, transparent 40%);
 	border-radius: inherit;
-	box-shadow: 0 0 17px rgb(56, 52, 52) inset;
+	box-shadow: 0 0 17px rgb(0, 0, 0) inset;
 	margin: auto;
 	inset: 0;
 }
@@ -152,11 +156,11 @@ svg {
 	aspect-ratio: 4/5;
 	position: absolute;
 	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
-	box-shadow: 0 0 50px rgba(7, 154, 187, 0.304) inset;
+	box-shadow: 0 0 50px rgba(2, 39, 48, 0.625) inset;
 	rotate: 76deg;
 	right: 13vw;
 	top: 70vh;
-	background: linear-gradient(rgb(54, 255, 23), rgb(4, 37, 254));
+	background: linear-gradient(rgba(54, 255, 23, 0.707), rgba(34, 84, 193, 0.411));
 	animation: blob 9s ease-in-out infinite;
 }
 
@@ -166,7 +170,7 @@ svg {
 	width: 97%;
 	position: absolute;
 	background: inherit;
-	background-image: radial-gradient(circle at 10% 70%, rgb(15, 209, 227) 0%, transparent 40%);
+	background-image: radial-gradient(circle at 10% 70%, rgba(79, 15, 227, 0.393) 0%, transparent 40%);
 	border-radius: inherit;
 	box-shadow: 0 0 25px rgb(56, 52, 52) inset;
 	margin: auto;
@@ -178,10 +182,10 @@ svg {
 	aspect-ratio: 1;
 	position: absolute;
 	rotate: 45deg;
-	box-shadow: 0 0 7px rgb(66, 65, 65) inset;
+	box-shadow: 0 0 7px rgba(217, 236, 9, 0.392) inset;
 	right: -5vw;
 	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
-	background: linear-gradient(rgba(255, 0, 0, 0.889), rgb(248, 245, 65)), rgba(255, 255, 0, 0.336);
+	background: linear-gradient(rgb(255, 94, 0), rgba(200, 158, 5, 0.75), rgba(243, 255, 14, 0.75));
 	animation: blob 11s ease-in-out infinite;
 }
 
@@ -191,9 +195,9 @@ svg {
 	width: 96%;
 	position: absolute;
 	background: inherit;
-	background-image: radial-gradient(circle at 10% 70%, rgb(221, 255, 3) 0%, transparent 40%);
+	background-image: radial-gradient(circle at 10% 70%, rgba(205, 235, 10, 0.696) 0%, transparent 40%);
 	border-radius: inherit;
-	box-shadow: 0 0 17px rgb(56, 52, 52) inset;
+	box-shadow: 0 0 17px rgb(6, 0, 0) inset;
 	margin: auto;
 	inset: 0;
 }
@@ -240,13 +244,17 @@ nav>a {
 	aspect-ratio: 1;
 	font-size: clamp(14px, 2vw, 24px);
 	margin: clamp(10px, 2vw, 18px);
+	border: 2px solid rgb(78, 11, 75);
 	background-image:
-		radial-gradient(transparent 55%, rgba(253, 0, 173, 0.8)),
-		radial-gradient(circle at -10% 80%, rgba(248, 0, 244, 0.65) 0%, transparent 60%), radial-gradient(circle at 10% 90%, rgba(0, 51, 255, 0.852) 0%, transparent 60%),
-		radial-gradient(circle at 95% 10%, rgba(159, 33, 255, 0.5) 0%, transparent 20%);
+		repeating-conic-gradient(rgba(11, 11, 229, 0.396) 12.5%, rgba(0, 0, 0, 0.068) 12.5%, rgba(0, 0, 0, 0.299) 25%),
+		radial-gradient(transparent 42.5%, rgba(81, 6, 94, 0.397)),
+		radial-gradient(circle at -10% 80%, rgba(233, 136, 232, 0.2) 0%, transparent 60%),
+		radial-gradient(circle at 0% 120%, rgba(0, 47, 255, 0.8) 0%, transparent 40%),
+		radial-gradient(circle at -10px 120%, rgba(22, 72, 236, 0.5) 0%, transparent 50%),
+		radial-gradient(circle at 90% 10%, rgb(247, 232, 220) 0%, transparent 22%);
 	border-radius: 50%;
-	box-shadow: 0 0 20px rgba(255, 129, 249, 0.15) inset, 0 0 50px rgba(4, 3, 4, 0.115) inset;
-	backdrop-filter: blur(3px) brightness(1.6);
+	box-shadow: 0 0 15px rgba(84, 2, 125, 0.45) inset, 0 0 40px rgba(50, 26, 114, 0.636) inset, 0 0 60px rgba(206, 183, 216, 0.164) inset;
+	backdrop-filter: blur(1.75px) brightness(2);
 	animation: float 16s ease-in-out infinite;
 	animation-delay: calc(.53s * var(--i));
 	transition: .3s all;
@@ -257,10 +265,10 @@ nav>a:before {
 	height: 95%;
 	width: 95%;
 	position: absolute;
-	background-color: rgba(56, 1, 1, 0.255);
-	border: 2px solid rgba(243, 133, 133, 0.253);
+	background-color: rgba(0, 0, 0, 0.25);
+	border: 2px solid rgba(243, 133, 133, 0.25);
 	border-radius: 50%;
-	transform: translate(-10px, -10px);
+	transform: translate(-25px, 20px) skewX(-5deg);
 	z-index: -10;
 	filter: blur(3px);
 }
@@ -270,9 +278,9 @@ nav>a:after {
 	height: 95%;
 	width: 95%;
 	position: absolute;
-	background: radial-gradient(rgba(235, 39, 21, 0.2), transparent);
+	background: radial-gradient(rgba(235, 39, 21, 0.3), transparent);
 	border-radius: 50%;
-	transform: translate(35px, 30px);
+	transform: translate(35px, -30px) skewX(-5deg);
 	z-index: -10000;
 	filter: blur(3px);
 }
@@ -281,7 +289,6 @@ nav>a:hover {
 	box-shadow: 0 0 17px rgb(219, 245, 89) inset;
 	border: 2px solid rgba(255, 255, 255, 0.723);
 	background-color: rgba(211, 235, 0, 0.616);
-	border: 2px solid rgba(245, 63, 63, 0.36);
 	color: black;
 	text-shadow: none;
 }
@@ -318,11 +325,8 @@ nav>a:hover:after {
 a {
 	text-decoration: none;
 	color: rgb(252, 214, 59);
-	text-shadow: 2px 2px 2px black, 0px 0px 5px black;
 }
 
 a:visited {
-	color: rgb(255, 115, 0);
-	text-shadow: 2px 2px 2px black;
-
+	color: rgb(144, 144, 144);
 }
