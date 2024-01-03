@@ -95,6 +95,7 @@ svg {
 
 .next {
 	color: rgb(100, 100, 100);
+	position: relative;
 	rotate: -10deg;
 	top: 80%;
 	left: 5%;
@@ -104,6 +105,11 @@ svg {
 	text-shadow: none;
 	margin: auto;
 	width: auto;
+}
+
+div>span {
+	position: relative;
+	top: 2px;
 }
 
 .south {
