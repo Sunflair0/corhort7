@@ -4,7 +4,8 @@ a:visited.flag {
 	text-decoration: none;
 }
 
-.flag {
+.flag,
+.flagW {
 	position: fixed;
 	font-size: medium;
 	font-weight: 500;
@@ -21,8 +22,16 @@ a:visited.flag {
 	padding: 10px;
 	right: 0px;
 	top: 7.5vh;
+text-decoration: none;
 	border-radius: 10px 0 0 10px;
 	box-shadow: 0 0 7px black inset;
 	cursor: pointer;
 	z-index: 100;
+}
+
+.flagW {
+	color: rgb(255, 236, 236);
+	border-color: rgb(209, 208, 208);
+	background-image: repeating-radial-gradient(rgba(255, 236, 236, 0.4), transparent);
+	box-shadow: 0 0 7px rgb(255, 236, 236) inset;
 }
