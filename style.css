@@ -173,12 +173,10 @@ body {
 	backdrop-filter: blur(1.75px) brightness(1.05);
 	border-right: rgb(0, 0, 0) 2px solid;
 	box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), -10px -10px 0px rgba(2, 51, 38, 0.182) inset, 10px 0 0px rgba(2, 51, 38, 0.1) inset, 10px 10px 0px rgba(2, 51, 38, 0.182) inset;
-	/* background: repeating-linear-gradient(90deg, rgba(41, 38, 38, 0.2), rgb(152, 143, 132), rgba(58, 48, 48, 0.15), rgba(148, 148, 151, 0.558)); */
 	background: linear-gradient(rgba(0, 0, 0, 0.16), rgba(248, 0, 0, 0.15));
 	z-index: 1;
 }
 
-/* paradomia */
 .right {
 	align-items: center;
 	right: 0;
