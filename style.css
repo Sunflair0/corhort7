@@ -1,4 +1,6 @@
-* {
+*,
+::before,
+::after {
 	border: 0;
 	margin: 0;
 	box-sizing: border-box;
@@ -11,7 +13,8 @@ html {
 }
 
 body {
-	background: radial-gradient(rgb(224, 63, 63), rgb(15, 0, 0) 70%);
+	display: flex;
+	background: radial-gradient(rgb(224, 63, 63), rgb(15, 10, 10) 70%);
 	height: 100vh;
 	position: relative;
 	perspective: 1000px;
@@ -19,9 +22,123 @@ body {
 	user-select: none;
 }
 
-.square {
+.blob_wrap {
+	z-index: -1;
+	position: absolute;
+	min-height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.blob1 {
+	/* https://9elements.github.io/fancy-border-radius/ */
 	display: flex;
 	position: absolute;
+	height: clamp(8rem, 50vh, 24rem);
+	top: 20vh;
+	right: 80vw;
+	aspect-ratio: 1;
+	rotate: 180deg;
+	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
+	background-image: linear-gradient(rgba(87, 0, 249, 0.822), rgba(200, 0, 255, 0.334));
+	animation: blob 7.5s ease-in-out infinite;
+}
+
+.blob1::before {
+	content: "";
+	height: 96%;
+	width: 96%;
+	position: absolute;
+	background: inherit;
+	background-image: radial-gradient(circle at 10% 70%, rgb(249, 8, 221) 0%, transparent 40%), radial-gradient(circle at 10% 70%, rgb(249, 8, 156) 0%, transparent 40%);
+	border-radius: inherit;
+	box-shadow: 0 0 17px rgb(0, 0, 0) inset;
+	margin: auto;
+	inset: 0;
+}
+
+.blob2 {
+	height: clamp(10rem, 50vh, 27rem);
+	aspect-ratio: 4/5;
+	position: absolute;
+	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
+	box-shadow: 0 0 50px rgba(2, 39, 48, 0.625) inset;
+	rotate: 76deg;
+	right: 5vw;
+	top: 65vh;
+	background: linear-gradient(rgba(54, 255, 23, 0.707), rgba(34, 84, 193, 0.411));
+	animation: blob 9s ease-in-out infinite;
+}
+
+.blob2::before {
+	content: "";
+	height: 97%;
+	width: 97%;
+	position: absolute;
+	background: inherit;
+	background-image: radial-gradient(circle at 10% 70%, rgba(79, 15, 227, 0.393) 0%, transparent 40%);
+	border-radius: inherit;
+	box-shadow: 0 0 25px rgb(56, 52, 52) inset;
+	margin: auto;
+	inset: 0;
+}
+
+.blob3 {
+	height: clamp(5rem, 50vh, 17rem);
+	aspect-ratio: 1;
+	position: absolute;
+	rotate: 45deg;
+	box-shadow: 0 0 7px rgba(217, 236, 9, 0.392) inset;
+	right: -5vw;
+	top: -10vh;
+	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
+	background: linear-gradient(rgb(255, 94, 0), rgba(200, 158, 5, 0.75), rgba(243, 255, 14, 0.75));
+	animation: blob 11s ease-in-out infinite;
+}
+
+.blob3::before {
+	content: "";
+	height: 96%;
+	width: 96%;
+	position: absolute;
+	background: inherit;
+	background-image: radial-gradient(circle at 10% 70%, rgba(205, 235, 10, 0.696) 0%, transparent 40%);
+	border-radius: inherit;
+	box-shadow: 0 0 17px rgb(6, 0, 0) inset;
+	margin: auto;
+	inset: 0;
+}
+
+@keyframes blob {
+
+	0% {
+		border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
+	}
+
+	25% {
+		border-radius: 50% 50% 64% 36% / 35% 70% 30% 65%;
+	}
+
+	50% {
+		border-radius: 64% 76% 64% 36% / 56% 70% 30% 94%;
+	}
+
+	75% {
+		border-radius: 76% 24% 64% 26% / 65% 34% 36% 35%;
+	}
+}
+
+.shell {
+	display: flex;
+	align-items: center;
+	position: relative;
+	top: 0;
+	height: 93vh;
+	width: 100%;
+}
+
+.square {
+	display: flex;
 	border-bottom: 2px solid black;
 	outline: 6px double rgb(216, 142, 29);
 	height: 75vh;
@@ -118,113 +235,10 @@ div>span {
 	top: 30%;
 	left: 29%;
 	rotate: 7deg;
-	background-image: url(South\ New\ Logo.png);
+	background-image: url(/assets/South\ New\ Logo.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-}
-
-.blob_wrap {
-	z-index: -1;
-	overflow: hidden;
-}
-
-.blob1 {
-	/* https://9elements.github.io/fancy-border-radius/ */
-	display: flex;
-	position: relative;
-	height: 24rem;
-	top: 30vh;
-	right: 70vw;
-	aspect-ratio: 1;
-	position: absolute;
-	rotate: 180deg;
-	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
-	background-image: linear-gradient(rgba(87, 0, 249, 0.822), rgba(200, 0, 255, 0.334));
-	animation: blob 7.5s ease-in-out infinite;
-}
-
-.blob1::before {
-	content: "";
-	height: 96%;
-	width: 96%;
-	position: absolute;
-	background: inherit;
-	background-image: radial-gradient(circle at 10% 70%, rgb(249, 8, 221) 0%, transparent 40%), radial-gradient(circle at 10% 70%, rgb(249, 8, 156) 0%, transparent 40%);
-	border-radius: inherit;
-	box-shadow: 0 0 17px rgb(0, 0, 0) inset;
-	margin: auto;
-	inset: 0;
-}
-
-.blob2 {
-	height: 27rem;
-	aspect-ratio: 4/5;
-	position: absolute;
-	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
-	box-shadow: 0 0 50px rgba(2, 39, 48, 0.625) inset;
-	rotate: 76deg;
-	right: 13vw;
-	top: 70vh;
-	background: linear-gradient(rgba(54, 255, 23, 0.707), rgba(34, 84, 193, 0.411));
-	animation: blob 9s ease-in-out infinite;
-}
-
-.blob2::before {
-	content: "";
-	height: 97%;
-	width: 97%;
-	position: absolute;
-	background: inherit;
-	background-image: radial-gradient(circle at 10% 70%, rgba(79, 15, 227, 0.393) 0%, transparent 40%);
-	border-radius: inherit;
-	box-shadow: 0 0 25px rgb(56, 52, 52) inset;
-	margin: auto;
-	inset: 0;
-}
-
-.blob3 {
-	height: 17rem;
-	aspect-ratio: 1;
-	position: absolute;
-	rotate: 45deg;
-	box-shadow: 0 0 7px rgba(217, 236, 9, 0.392) inset;
-	right: -5vw;
-	border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
-	background: linear-gradient(rgb(255, 94, 0), rgba(200, 158, 5, 0.75), rgba(243, 255, 14, 0.75));
-	animation: blob 11s ease-in-out infinite;
-}
-
-.blob3::before {
-	content: "";
-	height: 96%;
-	width: 96%;
-	position: absolute;
-	background: inherit;
-	background-image: radial-gradient(circle at 10% 70%, rgba(205, 235, 10, 0.696) 0%, transparent 40%);
-	border-radius: inherit;
-	box-shadow: 0 0 17px rgb(6, 0, 0) inset;
-	margin: auto;
-	inset: 0;
-}
-
-@keyframes blob {
-
-	0% {
-		border-radius: 40% 60% 66% 34% / 65% 25% 75% 35%;
-	}
-
-	25% {
-		border-radius: 50% 50% 64% 36% / 35% 70% 30% 65%;
-	}
-
-	50% {
-		border-radius: 64% 76% 64% 36% / 56% 70% 30% 94%;
-	}
-
-	75% {
-		border-radius: 76% 24% 64% 26% / 65% 34% 36% 35%;
-	}
 }
 
 nav {
@@ -335,4 +349,24 @@ a {
 
 a:visited {
 	color: rgb(144, 144, 144);
+}
+
+.cc>a {
+	transition: .3s all;
+}
+
+.cc a:hover {
+	color: #00b5ef;
+}
+
+footer {
+	display: flex;
+	position: absolute;
+	justify-content: space-around;
+	align-items: center;
+	border-top: 1px rgb(216, 142, 29) solid;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 7vh;
+	width: 100%;
+	bottom: 0;
 }
